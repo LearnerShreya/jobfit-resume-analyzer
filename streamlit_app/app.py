@@ -63,14 +63,8 @@ if page == "Upload Resume":
     uploaded_file = st.file_uploader("Choose your resume file", type=["pdf"])
 
     if uploaded_file:
-        uploads_dir = os.path.join("..", "uploads")
-        os.makedirs(uploads_dir, exist_ok=True)
-
-        save_path = os.path.join(uploads_dir, uploaded_file.name)
-
-        with open(save_path, "wb") as f:
-            f.write(uploaded_file.read())
-
+        from utils import save_uploaded_resume
+        save_path = save_uploaded_resume(uploaded_file)
         st.session_state.resume_path = save_path
         st.success("✅ Resume uploaded successfully.")
 
@@ -88,12 +82,17 @@ elif page == "Analyze Resume":
     else:
         data = parse_resume(st.session_state.resume_path)
 
-        if data:
+        if data and data.get("error"):
+            st.error(f"❌ Failed to parse resume: {data['error']}")
+        elif data:
             with st.expander("📄 Extracted Resume Content"):
                 st.json(data)
 
             # Resume Scoring
-            score = calculate_score(data.get("text", ""), scorer_model)
+            recommender = ResumeRecommender()
+            predicted_roles = recommender.recommend_roles(data.get("text", ""), top_n=1)
+            predicted_field = predicted_roles[0][0] if predicted_roles else ""
+            score = calculate_score(data.get("text", ""), predicted_field)
             st.metric("💯 Resume Score", f"{score}/100")
 
             # JD Matcher (Optional)
@@ -114,7 +113,9 @@ elif page == "Get Recommendations":
     else:
         data = parse_resume(st.session_state.resume_path)
 
-        if data:
+        if data and data.get("error"):
+            st.error(f"❌ Failed to parse resume: {data['error']}")
+        elif data:
             # Corrected: Initialize using default or path-based constructor
             recommender = ResumeRecommender()
 
