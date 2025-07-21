@@ -91,7 +91,7 @@ SKILL_SYNONYMS: Dict[str, List[str]] = {
     'python': ['py'],
     'regression': ['linear regression', 'logistic regression'],
     'classification': ['binary classification', 'multi-class classification'],
-    # Add more as needed
+    # we can add more as needed
 }
 
 def _skill_in_text(skill: str, text: str) -> bool:
