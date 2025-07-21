@@ -88,11 +88,26 @@ elif page == "Analyze Resume":
             with st.expander("📄 Extracted Resume Content"):
                 st.json(data)
 
-            # Resume Scoring
+            # Resume Recommender
             recommender = ResumeRecommender()
-            predicted_roles = recommender.recommend_roles(data.get("text", ""), top_n=1)
-            predicted_field = predicted_roles[0][0] if predicted_roles else ""
-            score = calculate_score(data.get("text", ""), predicted_field)
+            predicted_roles = recommender.recommend_roles(data.get("text", ""), top_n=10)
+            st.subheader("🎯 All Role Probabilities")
+            for role, confidence in predicted_roles:
+                st.write(f"**{role}**: {confidence}%")
+
+            # Manual field selection for scoring
+            from score_resume import SKILL_KEYWORDS, calculate_score
+            available_fields = list(SKILL_KEYWORDS.keys())
+            default_field = predicted_roles[0][0] if predicted_roles else available_fields[0]
+            selected_field = st.selectbox("Select job role/domain to score against:", available_fields, index=available_fields.index(default_field) if default_field in available_fields else 0)
+
+            # Show matched keywords
+            resume_text = data.get("text", "").lower().strip()
+            matched_keywords = [skill for skill in SKILL_KEYWORDS[selected_field] if skill in resume_text]
+            st.write(f"**Matched Keywords for {selected_field}:** {', '.join(matched_keywords) if matched_keywords else 'None'}")
+
+            # Resume Scoring
+            score = calculate_score(data.get("text", ""), selected_field)
             st.metric("💯 Resume Score", f"{score}/100")
 
             # JD Matcher (Optional)
