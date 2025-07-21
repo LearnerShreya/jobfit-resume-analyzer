@@ -104,3 +104,5 @@ def parse_resume(resume_path: str) -> dict:
     if text.startswith("ERROR"):
         return {"error": text}
     return extract_entities(text)
+
+__all__ = ["parse_resume"]
