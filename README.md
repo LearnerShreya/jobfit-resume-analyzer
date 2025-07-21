@@ -1,6 +1,6 @@
 # jobfit-resume-analyzer
 
-- Live Demo: [View the app on Streamlit Cloud (sample link)](https://share.streamlit.io/your-username/your-repo/main/streamlit_app/app.py)
+- Live Demo: [View the app on Streamlit Cloud (sample link)](https://jobfit-resume-analyzer.streamlit.app/)
 
 As a part of CSI Internship Week 7 Assignment: Deploying Machine Learning Models with Streamlit:
 
