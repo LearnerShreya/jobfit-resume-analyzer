@@ -1,0 +1,205 @@
+python
+java
+c++
+c#
+javascript
+typescript
+html
+css
+react
+angular
+vue.js
+node.js
+express.js
+django
+flask
+spring
+spring boot
+next.js
+tailwind css
+bootstrap
+mongodb
+mysql
+postgresql
+sqlite
+oracle
+firebase
+aws
+azure
+google cloud
+docker
+kubernetes
+jenkins
+terraform
+linux
+bash
+git
+github
+gitlab
+jira
+numpy
+pandas
+scikit-learn
+tensorflow
+keras
+pytorch
+matplotlib
+seaborn
+power bi
+tableau
+excel
+r
+hadoop
+spark
+sql
+nosql
+hive
+flink
+airflow
+apache kafka
+nlp
+cv
+openai
+huggingface
+langchain
+llm
+machine learning
+deep learning
+data analysis
+data engineering
+etl
+data visualization
+oop
+dsa
+rest api
+graphql
+json
+xml
+postman
+unit testing
+integration testing
+agile
+scrum
+communication
+teamwork
+problem-solving
+leadership
+adaptability
+attention to detail
+decision making
+presentation skills
+creativity
+collaboration
+time management
+critical thinking
+customer service
+negotiation
+swift
+kotlin
+dart
+flutter
+react native
+android
+ios
+matlab
+stata
+julia
+shell scripting
+selenium
+beautifulsoup
+open cv
+fastapi
+streamlit
+dash
+plotly
+bokeh
+mlflow
+webrtc
+sagemaker
+bigquery
+redshift
+snowflake
+firebase
+elasticsearch
+splunk
+prometheus
+grafana
+unity
+blender
+autocad
+ansible
+puppet
+chef
+vagrant
+powershell
+zend
+drupal
+joomla
+woocommerce
+shopify
+wordpress
+blockchain
+solidity
+web3
+metamask
+nft
+cryptography
+cybersecurity
+networking
+ethical hacking
+penetration testing
+burpsuite
+wireshark
+vpn
+vpn setup
+proxy
+ssl
+tls
+encryption
+authentication
+authorization
+oauth
+sso
+saml
+zabbix
+new relic
+data wrangling
+data cleansing
+feature engineering
+model tuning
+model deployment
+docker-compose
+openai api
+chatgpt
+copilot
+code review
+devops
+microsoft azure
+gcp
+data lake
+data warehouse
+microservices
+monolith
+event driven architecture
+message queues
+pub/sub
+agile methodology
+kanban
+test driven development
+behavior driven development
+mocking
+ci/cd
+pipelines
+unit test
+regression test
+load testing
+performance optimization
+latency reduction
+scalability
+fault tolerance
+observability
+monitoring
+logging
+incident response
+debugging
+profiling
