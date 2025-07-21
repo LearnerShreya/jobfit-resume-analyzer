@@ -43,13 +43,16 @@ if page == "Upload Resume":
     uploaded_file = st.file_uploader("Choose your resume file", type=["pdf", "docx", "doc", "txt"])
     error_message = ""
     if uploaded_file:
+
         # File size validation (max 5MB)
         if uploaded_file.size > 5 * 1024 * 1024:
             error_message = "File too large. Please upload a file smaller than 5MB."
+
         # File content validation
         elif uploaded_file.size == 0:
             error_message = "Uploaded file is empty. Please select a valid resume."
         else:
+
             # Save file and parse content
             save_path = save_uploaded_resume(uploaded_file)
             st.session_state.resume_path = save_path
@@ -78,15 +81,17 @@ elif page == "Analyze Resume":
                 st.progress(confidence / 100, text=f"{role}: {confidence}%")
             available_fields = list(SKILL_KEYWORDS.keys())
             default_field = predicted_roles[0][0] if predicted_roles else available_fields[0]
+            
             # Add a subtle horizontal bar above the label
             st.markdown('<hr style="border: none; border-top: 2px solid #e0e0e0; margin-top: 24px; margin-bottom: 0;">', unsafe_allow_html=True)
-            st.markdown('<div style="font-size:1.1em; font-weight:bold; margin-top:10px; margin-bottom:6px;">Select job role/domain to score against:</div>', unsafe_allow_html=True)
+            st.markdown('<div style="font-size:1.4em; font-weight:bold; margin-top:10px; margin-bottom:6px;">Select job role/domain to score against:</div>', unsafe_allow_html=True)
             selected_field = st.selectbox(
                 " ",  # Hide default label
                 available_fields,
                 index=available_fields.index(default_field) if default_field in available_fields else 0,
                 help="Choose the job role you want your resume scored against."
             )
+
             # Custom skill list upload
             st.markdown("**Optional: Upload your own skill list (TXT or CSV, one skill per line/cell):**")
             custom_skill_file = st.file_uploader("Upload skill list", type=["txt", "csv"], key="custom_skill_list")
@@ -99,6 +104,7 @@ elif page == "Analyze Resume":
                 else:
                     custom_skills = [line.strip() for line in custom_skill_file if line.strip()]
             resume_text = data.get("text", "").lower().strip()
+
             # Use custom skills if provided
             skills_to_use = custom_skills if custom_skills else SKILL_KEYWORDS[selected_field]
             from score_resume import _skill_in_text
@@ -108,6 +114,7 @@ elif page == "Analyze Resume":
             st.markdown(' '.join([f'<span class="matched-keyword">{kw}</span>' for kw in matched_keywords]), unsafe_allow_html=True)
             st.markdown(f"**Missing Keywords for {selected_field}:**")
             st.markdown(' '.join([f'<span class="missing-keyword">{kw}</span>' for kw in missing_keywords]), unsafe_allow_html=True)
+
             # Score using custom or default skills
             if custom_skills:
                 score = round(100 * len(matched_keywords) / len(skills_to_use), 2) if skills_to_use else 0.0
@@ -118,6 +125,7 @@ elif page == "Analyze Resume":
             st.progress(score / 100, text=f"{score}/100")
             st.metric("Score", f"{score}/100")
             st.caption("Tip: Add more missing keywords to your resume for a higher score!")
+
             # Downloadable PDF report
             from fpdf import FPDF
             if st.button("Download Analysis Report (PDF)"):
