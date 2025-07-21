@@ -5,11 +5,15 @@ SKILL_KEYWORDS = {
     'Data Science': [
         'python', 'machine learning', 'data analysis', 'pandas', 'numpy',
         'regression', 'classification', 'deep learning', 'nlp',
-        'tensorflow', 'keras', 'pytorch', 'sql', 'matplotlib'
+        'tensorflow', 'keras', 'pytorch', 'sql', 'matplotlib',
+        'scikit-learn', 'seaborn', 'bokeh', 'plotly', 'data visualization', 'feature engineering', 'supervised learning', 'unsupervised learning', 'statistics', 'data wrangling', 'data mining', 'predictive modeling', 'big data', 'hadoop', 'spark', 'jupyter', 'notebook', 'matplotlib', 'data preprocessing'
+    ],
+    'Java Developer': [
+        'java', 'spring', 'spring boot', 'hibernate', 'jpa', 'servlet', 'jsp', 'maven', 'gradle', 'junit', 'rest api', 'microservices', 'tomcat', 'jboss', 'eclipse', 'intellij', 'oop', 'object oriented', 'multithreading', 'concurrency', 'jdbc', 'sql', 'mysql', 'oracle', 'git', 'json', 'xml', 'lambda', 'streams', 'collections', 'exception handling', 'design patterns', 'api development', 'unit testing', 'jenkins', 'docker', 'kubernetes', 'aws', 'azure', 'cloud', 'ci/cd', 'log4j', 'swagger', 'mockito', 'web services', 'soap', 'restful', 'jvm', 'garbage collection', 'performance tuning', 'debugging', 'deployment', 'build automation', 'version control', 'agile', 'scrum', 'jira', 'uml', 'data structures', 'algorithms'
     ],
     'Web Development': [
         'html', 'css', 'javascript', 'react', 'node.js', 'express',
-        'mongodb', 'frontend', 'backend', 'api', 'rest', 'bootstrap', 'typescript'
+        'mongodb', 'frontend', 'backend', 'api', 'rest', 'bootstrap', 'typescript', 'next.js', 'redux', 'vue', 'angular', 'sass', 'less', 'webpack', 'babel', 'graphql', 'php', 'laravel', 'django', 'flask', 'mysql', 'sqlite', 'postgresql', 'responsive design', 'ui', 'ux', 'websockets', 'jwt', 'oauth', 'authentication', 'authorization', 'testing', 'jest', 'mocha', 'chai', 'cypress', 'storybook', 'material ui', 'tailwind', 'vercel', 'netlify', 'heroku', 'aws', 'azure', 'cloud', 'api integration', 'restful', 'soap', 'web security', 'seo', 'performance optimization', 'pwa', 'service worker', 'ssr', 'csr', 'spa', 'mvc', 'mvvm', 'git', 'github', 'bitbucket', 'agile', 'scrum', 'jira'
     ],
     'Android Development': [
         'java', 'kotlin', 'android', 'xml', 'firebase',
