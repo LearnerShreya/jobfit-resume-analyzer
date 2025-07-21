@@ -17,7 +17,8 @@ def ensure_directory_exists(directory_path: str) -> None:
 
 def generate_unique_resume_path(uploaded_file) -> str:
     """Generate a unique file path for an uploaded resume using a timestamp."""
-    upload_dir = "uploaded_resumes"
+
+    upload_dir = "/tmp/uploaded_resumes"
     ensure_directory_exists(upload_dir)
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
     filename = f"{timestamp}_{uploaded_file.name}"
