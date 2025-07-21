@@ -1,24 +1,25 @@
 import pickle
 import numpy as np
+import os
+import joblib
 
 class ResumeRecommender:
     def __init__(
         self,
-        classifier_path='model/classifier.pkl',
-        vectorizer_path='model/vectorizer.pkl',
-        label_encoder_path='model/label_encoder.pkl'
+        classifier_path=None,
+        vectorizer_path=None,
+        label_encoder_path=None
     ):
+        base_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "model"))
+        classifier_path = classifier_path or os.path.join(base_dir, 'classifier.pkl')
+        vectorizer_path = vectorizer_path or os.path.join(base_dir, 'vectorizer.pkl')
+        label_encoder_path = label_encoder_path or os.path.join(base_dir, 'label_encoder.pkl')
         # Load the classifier
-        with open(classifier_path, 'rb') as f:
-            self.classifier = pickle.load(f)
-
+        self.classifier = joblib.load(classifier_path)
         # Load the vectorizer
-        with open(vectorizer_path, 'rb') as f:
-            self.vectorizer = pickle.load(f)
-
+        self.vectorizer = joblib.load(vectorizer_path)
         # Load the label encoder
-        with open(label_encoder_path, 'rb') as f:
-            self.label_encoder = pickle.load(f)
+        self.label_encoder = joblib.load(label_encoder_path)
 
     def recommend_roles(self, resume_text, top_n=3):
         """
