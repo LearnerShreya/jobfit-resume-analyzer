@@ -31,8 +31,8 @@ def extract_entities(text):
             name = ent.text
             break
 
-    email_match = re.findall(r'\b[\w\.-]+@[\w\.-]+\.\w{2,4}\b', text)
-    phone_match = re.findall(r'\b\d{10}\b', text)
+    email_match = re.findall(r'[\w\.-]+@[\w\.-]+\.\w{2,4}', text)
+    phone_match = re.findall(r'((?:\+\d{1,3}[\s-]?)?(?:\(?\d{3}\)?[\s-]?)?\d{3}[\s-]?\d{4})', text)
 
     skills_found = []
     for skill in SKILLS_DB:
@@ -49,7 +49,8 @@ def extract_entities(text):
         "company_names": [],
         "designations": [],
         "summary": "",  # Optional: Add NLP summary logic
-        "error": ""
+        "error": "",
+        "text": text
     }
 
 def parse_resume(resume_path):
