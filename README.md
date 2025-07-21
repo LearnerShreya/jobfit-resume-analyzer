@@ -102,5 +102,5 @@ See `output.txt` for example outputs and what to expect from the app.
 
 ## Credits
 - Developed as an internship assignment
-- Built with Streamlit, scikit-learn, spaCy, and related technologies
+- Built with Streamlit, scikit-learn, spaCy,  NLTK, and related technologies
 - Icon attribution as required
