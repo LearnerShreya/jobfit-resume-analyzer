@@ -1,7 +1,7 @@
 # Approach and Methodology
 
 ## Overview
-Smart Resume Analyzer was developed to provide a practical, user-friendly solution for resume analysis and job role recommendation. The project combines machine learning, natural language processing, and a modern web interface to deliver actionable insights for both job seekers and recruiters.
+jobfit-resume-analyzer was developed to provide a practical, user-friendly solution for resume analysis and job role recommendation. The project combines machine learning, natural language processing, and a modern web interface to deliver actionable insights for both job seekers and recruiters.
 
 ## Problem Statement
 Job seekers often lack feedback on how well their resumes align with specific job roles. Recruiters need efficient tools to screen and match candidates. This project addresses both needs by automating resume parsing, skill extraction, scoring, and job role recommendation.
@@ -46,4 +46,4 @@ Job seekers often lack feedback on how well their resumes align with specific jo
 5. The app provides actionable feedback and downloadable reports.
 
 ## Conclusion
-Smart Resume Analyzer delivers a practical, extensible tool for resume analysis and job role recommendation. The modular design and clear workflow ensure maintainability and real-world applicability.
+jobfit-resume-analyzer delivers a practical, extensible tool for resume analysis and job role recommendation. The modular design and clear workflow ensure maintainability and real-world applicability.
