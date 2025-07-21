@@ -1,0 +1,59 @@
+Sample Output for Resume Analysis
+================================
+
+Extracted Resume Content:
+------------------------
+{
+  "name": "Alex Johnson",
+  "email": "alex.johnson@email.com",
+  "phone": "1234567890",
+  "skills": [
+    "python", "sql", "machine learning", "pandas", "numpy", "flask", "html", "css", "javascript"
+  ],
+  "education": "Bachelor of Science in Computer Science\nTech University\n2018-2022 | CGPA: 8.5\nHigh School | City Public School\n2016-2018 | Percentage: 92%",
+  "experience": "Software Developer Intern | DataSoft Solutions | June 2021 - August 2021\nTeaching Assistant | Tech University | Jan 2020 - May 2020",
+  "projects": "Project: Smart Inventory System | Python, Flask, SQL\nProject: Personal Portfolio Website | HTML, CSS, JavaScript",
+  "achievements": "Winner, University Hackathon 2021\nDean's List 2019, 2020, 2021",
+  "company_names": [],
+  "designations": [],
+  "summary": "",
+  "error": "",
+  "text": "...full resume text..."
+}
+
+All Role Probabilities:
+----------------------
+Data Science: 12.5%
+Python Developer: 10.2%
+Web Developer: 8.7%
+Java Developer: 7.1%
+Full Stack Developer: 6.9%
+DevOps Engineer: 5.3%
+
+Matched Keywords for Data Science:
+----------------------------------
+python, sql, machine learning, pandas, numpy
+
+Missing Keywords for Data Science:
+----------------------------------
+regression, classification, deep learning, nlp, tensorflow, keras, pytorch, scikit-learn, matplotlib, seaborn, bokeh, plotly, data visualization, feature engineering, jupyter, notebook, statistics, data wrangling, data mining, predictive modeling, big data, hadoop, spark, data preprocessing
+
+Resume Score:
+-------------
+15.15/100
+
+Top Recommendations:
+--------------------
+Data Science (12.5%)
+Python Developer (10.2%)
+Web Developer (8.7%)
+
+Downloadable Reports:
+---------------------
+- PDF and HTML reports available for download after analysis.
+
+Error Handling:
+---------------
+- If an unsupported file type or a file larger than 5MB is uploaded, a clear error message is shown.
+- If the resume cannot be parsed, the user is notified with an actionable message.
+- If a required section is missing, the output will show an empty string for that section.
