@@ -5,6 +5,13 @@ from recommender import ResumeRecommender
 from score_resume import calculate_score, SKILL_KEYWORDS
 from jd_matcher import match_resume_to_jd
 from utils import load_pickle_model, render_pdf_as_iframe, save_uploaded_resume
+import spacy
+try:
+    spacy.load("en_core_web_sm")
+except OSError:
+    from spacy.cli import download
+    download("en_core_web_sm")
+    spacy.load("en_core_web_sm")
 
 st.set_page_config(
     page_title="Smart Resume Analyzer",
