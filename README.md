@@ -9,16 +9,17 @@ As a part of CSI Internship Week 7 Assignment: Deploying Machine Learning Models
 ## Screenshots
 
 ### Upload Resume
-![Upload Resume](assets/image-3.png)
 ![Upload Resume](assets/image-1.png)
+![Upload Resume](assets/image-2.png)
 
 ### Analyze Resume
-![Analyze Resume - Step 1](assets/image-4.png)
-![Analyze Resume - Step 2](assets/image-5.png)
-![Analyze Resume - Step 3](assets/image-6.png)
+![Analyze Resume - Step 1](assets/image-3.png)
+![Analyze Resume - Step 2](assets/image-4.png)
+![Analyze Resume - Step 3](assets/image-5.png)
+![Analyze Resume - Step 4](assets/image-6.png)
 
 ### Get Recommendations
-![Get Recommendations](assets/image-2.png)
+![Get Recommendations](assets/image-7.png)
 
 ## Features
 - Upload resumes in PDF, DOCX, DOC, or TXT format
