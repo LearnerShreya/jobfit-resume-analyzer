@@ -10,6 +10,7 @@ As a part of CSI Internship Week 7 Assignment: Deploying Machine Learning Models
 
 ### Upload Resume
 ![Upload Resume](assets/image-3.png)
+![Upload Resume](assets/image-1.png)
 
 ### Analyze Resume
 ![Analyze Resume - Step 1](assets/image-4.png)
