@@ -1,4 +1,4 @@
-# jobfit-resume-analyzer
+# jobfit resume analyzer
 
 ## Live Demo: [jobfit-resume-analyzer](https://jobfit-resume-analyzer.streamlit.app/)
 
